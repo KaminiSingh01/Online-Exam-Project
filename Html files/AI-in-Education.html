@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Education</title>
+    <link rel="stylesheet" href="../Css Files/AI-in-Education.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            position: relative;
+        }
+
+        .close {
+            color: #aaa;
+            position: absolute;
+            right: 15px;
+            top: 5px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        #contactForm {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #contactForm input,
+        #contactForm textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        #contactForm button {
+            background-color: #0d1527;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #contactForm button:hover {
+            background-color:#0d1527cc;
+        }
+    </style>
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        // Optional: Close modal when clicking outside
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent actual submission
+
+            // You can add form validation or send via AJAX here
+            alert("Thank you for contacting us!");
+
+            // Close the modal after submission
+            closeModal('contactModal');
+            this.reset();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="top-left">
+                <i class="fa fa-globe icons" aria-hidden="false"> English</i>
+                <i class="fa fa-phone icons" aria-hidden="true" onclick="openModal('callModal')"> Call Us</i>
+                <i class="fa fa-envelope icons" aria-hidden="true" onclick="openModal('contactModal')"> Contact Us</i>
+            </div>
+
+            <div class="top-right">
+                <a href="#" id="loginLink"><i class="fa fa-key icons" aria-hidden="true"> Login</i></a>
+                <span id="userNameDisplay" style=" color:white;  font-size: 17px; font-weight: bold;"></span>
+                <a href="#" id="logoutLink"
+                    style=" display: none; font-size: 17px; color: red; text-decoration: none; font-weight: bold;">Logout</a>
+            </div>
+        </div>
+        <nav>
+            <div class="navdiv">
+                <div class="logo">
+                    <h1>DIGIEXAM</h1>
+                </div>
+                <div class="navbar">
+                    <ul class="head">
+                        <li class="heading">How It Work
+                            <ul class="navbar-content">
+                                <div class="contents">
+                                    <li><a href='Platform-How-it-Work.html'>Product Overview</a></li>
+                                    <li><a href='tools.html'>Tools</a></li>
+                                    <li><a href='Technology.html'>Technology</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="heading disabled" id="onlineExamination">Online Examination
+                            <ul class="navbar-content">
+                                <div class="contents">
+                                    <h6>Talent Assessments</h6>
+                                    <p>Assess your talent holistically</p>
+                                    <li><a href='Psychometric.html'>Psychometric tests</a></li>
+                                    <li><a href='Behavioral.html'>Behavioral tests</a></li>
+                                    <li><a href='Aptitude.html'>Aptitude tests</a></li>
+                                    <li><a href='Technical.html'>Technical tests</a></li>
+                                    <li><a href='Communicaton.html'>Communication skills tests</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="heading">Customer
+                            <ul class="navbar-content">
+                                <div class="contents">
+                                    <h6>Who We Serve</h6>
+                                    <li><a href='School.html'>Schools</a></li>
+                                    <li><a href='Higher-Education.html'>Higher Education</a></li>
+                                    <li><a href='Companies-Organisation.html'>Companies & Organisations</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="heading">Resource
+                            <ul class="navbar-content">
+                                <div class="contents">
+                                    <li><a href='Privacy-center.html'>Privacy center</a></li>
+                                    <li><a href="AI-in-Education.html">AI in Education</a></li>
+                                    <li><a href='Support.html'>Support</a></li>
+                                </div>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="action">
+                    <img src="../images/Photos/hamburger.png" alt="Hamburger">
+                    <button><a href="Schedule-intro.html">Request a Demo</a></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="section1">
+            <div class="content">
+                <h1>AI in Education: Transforming Learning & Assessment</h1>
+                <p>Artificial Intelligence (AI) is revolutionizing education, from personalized learning to automated
+                    assessments. With the rapid adoption of AI-powered tools like ChatGPT, educators and institutions
+                    are navigating both opportunities and challenges.</p>
+            </div>
+            <div class="image1">
+                <img src="../images/Photos/img1.png" alt="Image#1">
+            </div>
+        </div>
+        <div class="section2">
+            <div class="top-content">
+                <h1>The impact of AI in education</h1>
+            </div>
+            <div class="bottom">
+                <div class="box">
+                    <h2>Educators of tomorrow from the Technologies of today</h2>
+                    <p>AI is reshaping the way students learn and educators teach. Adaptive learning platforms use AI to
+                        tailor content based on individual student needs, ensuring a more personalized and efficient
+                        learning experience. Schools and universities are integrating AI-driven solutions for grading,
+                        feedback, and administrative tasks, freeing up educators to focus on student engagement and
+                        critical thinking.</p>
+                </div>
+                <div class="image">
+                    <img src="../images/Photos/img2.png" alt="Image#2">
+                </div>
+                <div class="image">
+                    <img src="../images/Photos/img3.jpg" alt="Image#3">
+                </div>
+                <div class="box">
+                    <h2>Challenges in Assessment & Academic Integrity</h2>
+                    <p>With AI-generated content becoming more sophisticated, maintaining academic integrity has become
+                        a pressing issue. Traditional assessment methods are being questioned as students test AI's
+                        capabilities. Institutions are implementing AI-powered plagiarism detection, lockdown browsers,
+                        and remote proctoring to ensure fair evaluations.</p>
+                </div>
+                <div class="box">
+                    <h2>AI’s Role in Teaching & Educators’ Responsibilities</h2>
+                    <p>Educators are adapting to a rapidly changing landscape where AI plays an increasing role in
+                        curriculum design and student support. Thought leaders such as Erik Winerö, Suzanne Pathkiller,
+                        and John DiMaria have discussed how AI is redefining the educator's role, highlighting the need
+                        for digital literacy and responsible AI integration in classrooms.</p>
+                </div>
+                <div class="image">
+                    <img src="../images/Photos/img4.png" alt="Image#4">
+                </div>
+                <div class="image">
+                    <img src="../images/Photos/img5.jpg" alt="Image#5">
+                </div>
+                <div class="box">
+                    <h2>AI-Natives, AI-Immigrants & The Future of Learning</h2>
+                    <p>As new generations grow up with AI, educators must decide whether to embrace these technological
+                        advancements or rely on traditional methods. The shift requires developing new literacies to
+                        prepare students for an AI-driven world, fostering skills like critical thinking, ethical AI
+                        use, and adaptability.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="column1footer">
+                <div class="row">
+                    <h3>Digiexam</h3>
+                    <h4>Great knowledge deserves great exams</h4>
+                </div>
+                <div class="row4">
+                    <i class="fa-brands fa-facebook fa-2x" style="color: #74c0fc;"> <a href="#">Facebook</a></i>
+                    <i class="fa-brands fa-square-x-twitter fa-2x" style="color: #74c0fc;"> <a href="#">Twitter</a></i>
+                    <i class="fa-brands fa-linkedin fa-2x" style="color: #74c0fc;"> <a href="#">Linkedin</a></i>
+                </div>
+            </div>
+            <div class="column2footer">
+
+                <div class="col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="Technology.html">Technoogy</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="How-To-Work.html">Product Overview</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="Privacy-center.html">Privacy center</a>
+                        </li>
+                        <li><a href="AI-in-Education.html"> AI in Education</a>
+                        </li>
+                        <li><a href="Support.html">Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column3footer">
+                <div class="row1">
+                    <h3>Why choose Digiexam?
+                    </h3>
+                    <p>Have an intro with one of our experts to learn more about how we can work together.</p>
+                    <button><a href="Schedule-intro.html">Schedule intro</a></button>
+                    <img src="../images/photos/p3.png" width="150px">
+                </div>
+                <div class="row2">
+                    <p>Copyright © 2025 Digiexam. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Call Us Modal -->
+    <div id="callModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('callModal')">&times;</span>
+            <h2>Call Us</h2>
+            <p>You can reach us at: <strong>+917388298442</strong></p>
+        </div>
+    </div>
+
+    <!-- Contact Us Modal with Form -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('contactModal')">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- LOGIN MODAL -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="color: black; font-size: 28px; padding-bottom: 30px;">Login</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required style="border-radius: 5px;"><br><br>
+                <input type="password" id="password" placeholder="Password" required
+                    style="border-radius: 5px;"><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+
+    <script>
+
+        let isLoggedIn = false;
+
+        const loginModal = document.getElementById('loginModal');
+        const loginLink = document.getElementById('loginLink');
+        const logoutLink = document.getElementById('logoutLink');
+        const closeBtn = document.querySelector('.close');
+        const loginForm = document.getElementById('loginForm');
+        const userNameDisplay = document.getElementById('userNameDisplay');
+
+        // Open modal when "Login" clicked
+        loginLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (!isLoggedIn) {
+                loginModal.style.display = "block";
+            }
+        });
+
+        // Close modal when (x) clicked
+        closeBtn.addEventListener('click', function () {
+            loginModal.style.display = "none";
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function (e) {
+            if (e.target == loginModal) {
+                loginModal.style.display = "none";
+            }
+        });
+
+        // Handle login form submit
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === username && password === password) {
+                alert("Login successful!");
+                isLoggedIn = true;
+                sessionStorage.setItem('loggedIn', 'true');
+                sessionStorage.setItem('username', username);
+                enableOnlineExamination();
+                showUsername();
+                loginModal.style.display = "none";
+            } else {
+                alert("Invalid credentials!");
+            }
+        });
+
+        function enableOnlineExamination() {
+            const onlineExamMenu = document.getElementById('onlineExamination');
+            onlineExamMenu.classList.remove('disabled');
+            onlineExamMenu.style.pointerEvents = 'auto';
+            onlineExamMenu.style.opacity = '1';
+            onlineExamMenu.style.cursor = 'pointer';
+        }
+
+        function showUsername() {
+            const storedName = sessionStorage.getItem('username');
+            if (storedName) {
+                userNameDisplay.textContent = "Welcome " + storedName;
+                loginLink.style.display = "none"; // Hide Login
+                logoutLink.style.display = "inline"; // Show Logout
+            }
+        }
+
+        function logout() {
+            sessionStorage.clear();
+            isLoggedIn = false;
+            showToast("Logged out successfully!");
+            setTimeout(() => {
+                location.reload(); // Reload after toast disappears
+            }, 2000); // Wait 2 seconds
+        }
+
+        console.log("Made By Kamini Singh");
+
+        // Toast function
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = "toast show";
+            setTimeout(() => {
+                toast.className = toast.className.replace("show", "");
+            }, 1500); // Hide after 1.5 seconds
+        }
+
+
+        // Logout button click
+        logoutLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            logout();
+        });
+
+        // On page load
+        window.addEventListener('load', function () {
+            if (sessionStorage.getItem('loggedIn') === 'true') {
+                isLoggedIn = true;
+                enableOnlineExamination();
+                showUsername();
+            }
+        });
+
+        const hamburger = document.querySelector('.action img');
+        const navbar = document.querySelector('.navbar');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
